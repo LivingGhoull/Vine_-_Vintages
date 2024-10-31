@@ -1,0 +1,91 @@
+@use "./collection" as col;
+
+body,
+p,
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+body {
+  box-sizing: border-box;
+  color: white;
+  line-height: 1.4;
+  @include col.deafult_font;
+}
+
+// Creats space for all sections
+section {
+  padding-inline: map-get(col.$gaps, "sm");
+  padding-top: map-get(col.$gaps, "xl");
+  padding-bottom: map-get(col.$gaps, "xl");
+
+  display: flex;
+  justify-content: center;
+}
+
+// Container for width in diffrent devices
+.containers {
+  padding-inline: map-get(col.$gaps, "sm");
+
+  @media (min-width: map-get(col.$device_size, "tablet")) {
+    padding-inline: map-get(col.$gaps, "lg");
+    width: map-get(col.$device_size, "tablet");
+  }
+
+  @media (min-width: map-get(col.$device_size, "desktop")) {
+    width: map-get(col.$device_size, "desktop");
+  }
+}
+
+//For buttons
+.call_to_action {
+  @include col.button_type($hero: 1);
+  width: fit-content;
+  align-self: center;
+
+  @media (min-width: map-get(col.$device_size, "tablet")) {
+    align-self: start;
+  }
+}
+
+.hero_section {
+  @include col.flex_display(column, map-get(col.$gaps, "sm"));
+  align-items: center;
+
+  &__info {
+    @include col.flex_display(column, map-get(col.$gaps, "sm"));
+  }
+
+  &__description {
+    font-size: map-get(col.$font_size, "mid_bread");
+  }
+
+  &__img {
+    width: 50%;
+  }
+
+  @media (min-width: map-get(col.$device_size, "tablet")) {
+    @include col.flex_display(row);
+    justify-content: space-between;
+
+    &__info {
+      max-width: 410px;
+      gap: map-get(col.$gaps, "lg");
+    }
+
+    &__img {
+      max-width: 256px;
+    }
+  }
+
+  @media (min-width: map-get(col.$device_size, "desktop")) {
+    justify-content: center;
+
+    &__info {
+      max-width: 50%;
+      gap: map-get(col.$gaps, "lg");
+    }
+  }
+}

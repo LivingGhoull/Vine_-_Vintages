@@ -1,0 +1,37 @@
+@use "./variable" as var;
+
+@mixin flex_display($flex_d: column, $gap: map-get(var.$gaps, "xs")) {
+  display: flex;
+  flex-direction: $flex_d;
+  gap: $gap;
+}
+
+@mixin deafult_font {
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin button_type($hero: 0) {
+  background: white;
+  color: map-get(var.$colors, "dark_wine");
+
+  border-radius: map-get(var.$gaps, "lg") 0px map-get(var.$gaps, "lg") 0px;
+  border: none;
+
+  @include deafult_font;
+  font-weight: bold;
+  font-size: map-get(var.$font_size, "mid_bread");
+
+  padding-inline: map-get(var.$gaps, "lg");
+  padding-top: map-get(var.$gaps, "sm");
+  padding-bottom: map-get(var.$gaps, "sm");
+
+  box-shadow: map-get(var.$gaps, "sm") map-get(var.$gaps, "sm")
+    map-get(var.$gaps, "xs") rgba(0, 0, 0, 0.25);
+
+  @if $hero == 1 {
+    font-size: map-get(var.$font_size, "big_bread");
+  }
+}
