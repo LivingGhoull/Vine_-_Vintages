@@ -28,10 +28,15 @@
   padding-top: map-get(var.$gaps, "sm");
   padding-bottom: map-get(var.$gaps, "sm");
 
-  box-shadow: map-get(var.$gaps, "sm") map-get(var.$gaps, "sm")
+  box-shadow: map-get(var.$gaps, "xs") map-get(var.$gaps, "xs")
     map-get(var.$gaps, "xs") rgba(0, 0, 0, 0.25);
 
   @if $hero == 1 {
     font-size: map-get(var.$font_size, "big_bread");
+
+    box-shadow: map-get(var.$gaps, "sm")
+      map-get(var.$gaps, "sm")
+      map-get(var.$gaps, "xs")
+      rgba(0, 0, 0, 0.25);
   }
 }

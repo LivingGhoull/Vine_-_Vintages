@@ -1,9 +1,9 @@
-import Button from "../Button";
+import {Hero_Button} from "../Button";
 
 function Hero_section() {
   return (
     <section className="light_wine">
-      <div className="hero_section containers">
+      <div className="hero_section container">
         <div className="hero_section__info">
           <h1 className="h_big_head">Experience the Art of Winemaking</h1>
           <p className="hero_section__description">
@@ -12,7 +12,7 @@ function Hero_section() {
             you’re a connoisseur or new to the world of wine, we invite you to
             taste and experience the passion behind every bottle
           </p>
-          <Button>Book a Winery Tour</Button>
+          <Hero_Button>Book a Winery Tour</Hero_Button>
         </div>
         <img
           className="hero_section__img"

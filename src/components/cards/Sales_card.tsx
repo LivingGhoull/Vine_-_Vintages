@@ -1,4 +1,4 @@
-import Button  from "../Button"
+import {Button} from "../Button"
 interface Props {
   header: string;
   body: string;
@@ -6,7 +6,7 @@ interface Props {
 
 function Sales_card({header, body}: Props ) {
   return (
-    <div>
+    <div className="sales_card">
       <h3 className="h_small_head">{header}</h3>
       <p>{body}</p>
       <Button>Learn more</Button>
