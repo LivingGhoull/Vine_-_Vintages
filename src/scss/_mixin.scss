@@ -1,6 +1,6 @@
 @use "./variable" as var;
 
-@mixin flex_display($flex_d: column, $gap: map-get(var.$gaps, "xs")) {
+@mixin flex_display($gap: map-get(var.$gaps, "xs"), $flex_d: column ) {
   display: flex;
   flex-direction: $flex_d;
   gap: $gap;

@@ -61,11 +61,11 @@ section {
 }
 
 .hero_section {
-  @include col.flex_display(column, map-get(col.$gaps, "sm"));
+  @include col.flex_display(map-get(col.$gaps, "sm"));
   align-items: center;
 
   &__info {
-    @include col.flex_display(column, map-get(col.$gaps, "sm"));
+    @include col.flex_display(map-get(col.$gaps, "sm"));
 
     button {
       align-self: center;
@@ -85,7 +85,7 @@ section {
   }
 
   @media (min-width: map-get(col.$device_size, "tablet")) {
-    @include col.flex_display(row);
+    flex-direction: row;
     justify-content: space-between;
 
     &__info {
@@ -109,7 +109,7 @@ section {
 }
 
 .sales_section {
-  @include col.flex_display(column, map-get(col.$gaps, "sm"));
+  @include col.flex_display(map-get(col.$gaps, "sm"));
   align-items: center;
 }
 
@@ -119,7 +119,7 @@ section {
 
   padding: map-get(col.$gaps, "md") map-get(col.$gaps, "sm");
 
-  @include col.flex_display(column, map-get(col.$gaps, "sm"));
+  @include col.flex_display(map-get(col.$gaps, "sm"));
   align-items: center;
 
   box-shadow: 0px map-get(col.$gaps, "xs") map-get(col.$gaps, "xxs")
@@ -127,9 +127,44 @@ section {
 }
 
 .sales_cards {
-  @include col.flex_display(column, map-get(col.$gaps, "sm"));
+  @include col.flex_display(map-get(col.$gaps, "sm"));
 
   @media (min-width: map-get(col.$device_size, "desktop")) {
     flex-direction: row;
+  }
+}
+
+.about_section {
+  @include col.flex_display(map-get(col.$gaps, "sm"));
+
+  @media (min-width: map-get(col.$device_size, "tablet")) {
+    gap: map-get(col.$gaps, lg);
+  }
+
+  @media (min-width: map-get(col.$device_size, "desktop")) {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  &__info {
+    align-items: center;
+    @include col.flex_display(map-get(col.$gaps, "sm"));
+
+    @media (min-width: map-get(col.$device_size, "desktop")) {
+      align-items: start;
+      justify-content: center;
+      width: 50%;
+    }
+  }
+
+  &__img {
+    align-self: center;
+    width: 100%;
+
+    border-radius: map-get(col.$gaps, "sm");
+
+    @media (min-width: map-get(col.$device_size, "tablet")) {
+      max-width: 500px;
+    }
   }
 }
