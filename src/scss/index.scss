@@ -25,10 +25,10 @@ section {
 
 // Container for width in diffrent devices
 .container {
-  padding-inline: map-get(col.$gaps, "sm");
+  //padding-inline: map-get(col.$gaps, "sm");
 
   @media (min-width: map-get(col.$device_size, "tablet")) {
-    padding-inline: map-get(col.$gaps, "lg");
+    //padding-inline: map-get(col.$gaps, "lg");
     width: map-get(col.$device_size, "tablet");
   }
 
