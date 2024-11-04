@@ -18,9 +18,15 @@ body {
 // Creats space for all sections
 section {
   padding: map-get(col.$gaps, "xl") map-get(col.$gaps, "sm");
-
   display: flex;
   justify-content: center;
+
+  &:nth-child(even) {
+    background-color: map-get(col.$colors, "light_wine" );
+  }
+  &:nth-child(odd) {
+    background-color: map-get(col.$colors, "dark_wine" );
+  }
 }
 
 // Container for width in diffrent devices

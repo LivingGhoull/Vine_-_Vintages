@@ -2,7 +2,7 @@ import {Hero_Button} from "../Button";
 
 function Hero_section() {
   return (
-    <section className="light_wine">
+    <section>
       <div className="hero_section container">
         <div className="hero_section__info">
           <h1 className="h_big_head">Experience the Art of Winemaking</h1>
