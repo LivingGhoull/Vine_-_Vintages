@@ -6,7 +6,7 @@ interface Props {
 
 function Sales_card({header, body}: Props ) {
   return (
-    <div className="sales_card">
+    <div className="sales_card card">
       <h3 className="h_small_head">{header}</h3>
       <p>{body}</p>
       <Button>Learn more</Button>

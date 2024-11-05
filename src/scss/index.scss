@@ -1,5 +1,6 @@
 @use "./collection" as col;
 
+//Global styles
 body,
 p,
 h1,
@@ -18,7 +19,7 @@ body {
   @include col.deafult_font;
 }
 
-// Creats space for all sections
+//Creats space for all sections
 section {
   padding: map-get(col.$gaps, "xl") map-get(col.$gaps, "sm");
   display: flex;
@@ -32,12 +33,11 @@ section {
   }
 }
 
-// Container for width in diffrent devices
-.container {
-  //padding-inline: map-get(col.$gaps, "sm");
 
+//Individual elements
+//Container for width in diffrent devices
+.container {
   @media (min-width: map-get(col.$device_size, "tablet")) {
-    //padding-inline: map-get(col.$gaps, "lg");
     width: map-get(col.$device_size, "tablet");
   }
 
@@ -46,19 +46,22 @@ section {
   }
 }
 
-//For buttons
-.hero_call_to_action {
-  @include col.button_type($hero: 1);
-  width: fit-content;
-
-  &:hover {
-    cursor: pointer;
-    color: map-get(col.$colors, "light_wine");
-    background-color: #d9d9d9;
-  }
+//Made for all the cards basic styling
+.card {
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: map-get(col.$gaps, "md") map-get(col.$gaps, "sm");
+  box-shadow: 0px map-get(col.$gaps, "xs") map-get(col.$gaps, "xxs")
+    rgba(0, 0, 0, 0.25);
 }
 
+
+//Buttons as hero and deafult
 .call_to_action {
+  &-hero{
+    @include col.button_type($hero: 1);
+  }
+
   @include col.button_type();
   width: fit-content;
 
@@ -69,6 +72,9 @@ section {
   }
 }
 
+
+//Sections
+//Hero section
 .hero_section {
   @include col.flex_display(map-get(col.$gaps, "sm"));
   align-items: center;
@@ -117,32 +123,28 @@ section {
   }
 }
 
+
+//Sales_section
 .sales_section {
   @include col.flex_display(map-get(col.$gaps, "sm"));
   align-items: center;
-}
 
-.sales_card {
-  border: 1px solid white;
-  border-radius: 10px;
+  &__list {
+    @include col.flex_display(map-get(col.$gaps, "sm"));
 
-  padding: map-get(col.$gaps, "md") map-get(col.$gaps, "sm");
-
-  @include col.flex_display(map-get(col.$gaps, "sm"));
-  align-items: center;
-
-  box-shadow: 0px map-get(col.$gaps, "xs") map-get(col.$gaps, "xxs")
-    rgba(0, 0, 0, 0.25);
-}
-
-.sales_cards {
-  @include col.flex_display(map-get(col.$gaps, "sm"));
-
-  @media (min-width: map-get(col.$device_size, "desktop")) {
-    flex-direction: row;
+    @media (min-width: map-get(col.$device_size, "desktop")) {
+      flex-direction: row;
+    }
   }
 }
 
+.sales_card {
+  @include col.flex_display(map-get(col.$gaps, "sm"));
+  align-items: center;
+}
+
+
+//About_section
 .about_section {
   @include col.flex_display(map-get(col.$gaps, "sm"));
 
@@ -177,31 +179,31 @@ section {
   }
 }
 
+
+//Testimonial_section
 .testimonial_section {
   @include col.flex_display(map-get(col.$gaps, "xxl"));
   align-items: center;
-  
+
   &__list {
     @include col.flex_display(map-get(col.$gaps, "xxl"));
-      
+
     @media (min-width: map-get(col.$device_size, "desktop")) {
       flex-direction: row;
-      gap: map-get(col.$gaps, "lg" );
+      gap: map-get(col.$gaps, "lg");
     }
   }
 }
 
 .testimonial_card {
   position: relative;
-  border: 1px solid white;
-  border-radius: 10px;
-  padding: map-get(col.$gaps, "sm");
-  padding-top: map-get(col.$gaps, "xxl" );
+
+  @media (min-width: map-get(col.$device_size, "desktop")) {
+    width: 350px;
+  }
+
   @include col.flex_display();
   align-items: center;
-  box-shadow: 0px map-get(col.$gaps, "xs") map-get(col.$gaps, "xxs")
-    rgba(0, 0, 0, 0.25);
-
 
   &__profile_pic {
     position: absolute;
@@ -230,3 +232,5 @@ section {
     height: 40px;
   }
 }
+
+

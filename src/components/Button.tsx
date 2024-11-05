@@ -4,7 +4,7 @@ interface Props {
 
 function Hero_Button({children} : Props) {
   return (
-    <button type="button" className="hero_call_to_action">
+    <button type="button" className="call_to_action-hero">
       {children}
     </button>
   );

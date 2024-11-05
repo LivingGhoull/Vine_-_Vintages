@@ -6,7 +6,7 @@ interface Props {
 
 function Testimonials_card({ src, fullname, review }: Props) {
   return (
-    <div className="testimonial_card">
+    <div className="testimonial_card card">
       <img
         className="testimonial_card__profile_pic"
         src={src}
