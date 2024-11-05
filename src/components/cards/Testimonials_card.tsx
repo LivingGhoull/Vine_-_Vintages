@@ -6,10 +6,16 @@ interface Props {
 
 function Testimonials_card({ src, fullname, review }: Props) {
   return (
-    <div>
-      <img src={src} alt="Profile picture of the person who wrote the review" />
-      <h6>{fullname}</h6>
-      <p>{review}</p>
+    <div className="testimonial_card">
+      <img
+        className="testimonial_card__profile_pic"
+        src={src}
+        alt="Profile picture of the person who wrote the review"
+      />
+      <h6 className="testimonial_card__fullname">{fullname}</h6>
+      <p>
+        <span className="testimonial_card__review">“</span> {review}
+      </p>
     </div>
   );
 }

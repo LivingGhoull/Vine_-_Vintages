@@ -4,7 +4,10 @@ body,
 p,
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
 }
 
@@ -22,10 +25,10 @@ section {
   justify-content: center;
 
   &:nth-child(even) {
-    background-color: map-get(col.$colors, "light_wine" );
+    background-color: map-get(col.$colors, "light_wine");
   }
   &:nth-child(odd) {
-    background-color: map-get(col.$colors, "dark_wine" );
+    background-color: map-get(col.$colors, "dark_wine");
   }
 }
 
@@ -166,11 +169,64 @@ section {
   &__img {
     align-self: center;
     width: 100%;
-
     border-radius: map-get(col.$gaps, "sm");
 
     @media (min-width: map-get(col.$device_size, "tablet")) {
       max-width: 500px;
     }
+  }
+}
+
+.testimonial_section {
+  @include col.flex_display(map-get(col.$gaps, "xxl"));
+  align-items: center;
+  
+  &__list {
+    @include col.flex_display(map-get(col.$gaps, "xxl"));
+      
+    @media (min-width: map-get(col.$device_size, "desktop")) {
+      flex-direction: row;
+      gap: map-get(col.$gaps, "lg" );
+    }
+  }
+}
+
+.testimonial_card {
+  position: relative;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: map-get(col.$gaps, "sm");
+  padding-top: map-get(col.$gaps, "xxl" );
+  @include col.flex_display();
+  align-items: center;
+  box-shadow: 0px map-get(col.$gaps, "xs") map-get(col.$gaps, "xxs")
+    rgba(0, 0, 0, 0.25);
+
+
+  &__profile_pic {
+    position: absolute;
+    top: -75px;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    border: 2px solid white;
+  }
+
+  &__fullname {
+    font-size: map-get(col.$font_size, "mid_bread");
+    font-weight: bold;
+    &::before {
+      content: "— ";
+    }
+  }
+
+  &__review {
+    font-family: "Instrument Serif", serif;
+    font-weight: bold;
+    font-style: italic;
+
+    font-size: map-get(col.$font_size, "big_head");
+    display: block;
+    height: 40px;
   }
 }

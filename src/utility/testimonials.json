@@ -1,16 +1,16 @@
 [
   {
-    "src": "#",
+    "src": "src/assets/images/profiles_testimonials/woman_with_hand_on_cheeks.png",
     "fullname": "Samantha L",
     "review": "Vine & Vintages exceeded all of our expectations! The tour was incredible—seeing the winemaking process up close and tasting the wines right in the vineyard was an unforgettable experience. The staff was so welcoming, and the wines… absolutely delicious! We can’t wait to come back and stock up on more bottles!"
   },
   {
-    "src": "#",
+    "src": "src/assets/images/profiles_testimonials/lance-reis-dmRc729oLnk-unsplash.png",
     "fullname": "James R",
     "review": "The winery tour was an absolute delight. It’s rare to find a place where passion for wine shines through every detail. From the breathtaking views of the vineyard to the stories behind each bottle, Vine & Vintages made us fall in love with wine all over again. Highly recommended!"
   },
   {
-    "src": "#",
+    "src": "src/assets/images/profiles_testimonials/profile_picuter_guy_in_bar.png",
     "fullname": "Thomas W",
     "review": "I’ve been a wine club member for two years now, and every shipment is a pleasant surprise. The wines are always top-notch, and the exclusive events for members are a fantastic bonus. Vine & Vintages is a gem for anyone who appreciates great wine and an unforgettable experience."
   }
