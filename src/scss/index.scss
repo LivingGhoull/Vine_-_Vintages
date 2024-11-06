@@ -33,7 +33,6 @@ section {
   }
 }
 
-
 //Individual elements
 //Container for width in diffrent devices
 .container {
@@ -55,23 +54,22 @@ section {
     rgba(0, 0, 0, 0.25);
 }
 
-
 //Buttons as hero and deafult
 .call_to_action {
-  &-hero{
+  &-hero {
     @include col.button_type($hero: 1);
   }
 
   @include col.button_type();
   width: fit-content;
 
-  &:hover {
+  &:hover,
+  &:active {
     cursor: pointer;
     color: map-get(col.$colors, "light_wine");
     background-color: #d9d9d9;
   }
 }
-
 
 //Sections
 //Hero section
@@ -123,7 +121,6 @@ section {
   }
 }
 
-
 //Sales_section
 .sales_section {
   @include col.flex_display(map-get(col.$gaps, "sm"));
@@ -142,7 +139,6 @@ section {
   @include col.flex_display(map-get(col.$gaps, "sm"));
   align-items: center;
 }
-
 
 //About_section
 .about_section {
@@ -178,7 +174,6 @@ section {
     }
   }
 }
-
 
 //Testimonial_section
 .testimonial_section {
@@ -233,4 +228,43 @@ section {
   }
 }
 
+.news_section {
+  @include col.flex_display(map-get(col.$gaps, "sm"));
 
+  &__header {
+    @include col.flex_display(map-get(col.$gaps, "sm"));
+    align-items: center;
+    
+    @media (min-width: map-get(col.$device_size, "tablet")) {
+      flex-direction: row;
+      justify-content: space-between;  
+    }
+  }
+
+  &__list {
+    display: grid;
+    gap: map-get(col.$gaps, "md");
+
+    @media (min-width: map-get(col.$device_size, "tablet")) {
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+  }
+}
+
+.news_card {
+  padding: 0;
+
+  &__img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+
+  &__info {
+    padding: 8px;
+  }
+
+  &__header {
+    font-size: map-get(col.$font_size, "mid_bread");
+    padding-bottom: map-get(col.$gaps, "sm");
+  }
+}

@@ -8,10 +8,12 @@ interface Props {
 
 function News_card({header, body, src, alt}: Props) {
   return (
-    <div className="sales_card card">
-      <img src={src} alt={alt} />
-      <h6>{header}</h6>
-      <p>{body}</p>
+    <div className="news_card card">
+      <img className="news_card__img" src={src} alt={alt} />
+      <div className="news_card__info">
+        <h6 className="news_card__header" >{header}</h6>
+        <p>{body}</p>
+      </div>
     </div>
   );
 }

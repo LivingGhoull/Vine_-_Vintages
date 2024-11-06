@@ -5,12 +5,12 @@ import list from "../../utility/news.json";
 function News_section() {
   return (
     <section>
-      <div>
-        <div>
-          <h2>News</h2>
+      <div className="container news_section">
+        <div className="news_section__header">
+          <h2 className="h_mid_head">News</h2>
           <Button>See all news</Button>
         </div>
-        <div>
+        <div className="news_section__list">
           {list.map((value, index) => (
             <Card
               key={index}
