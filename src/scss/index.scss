@@ -228,16 +228,17 @@ section {
   }
 }
 
+//News_section
 .news_section {
   @include col.flex_display(map-get(col.$gaps, "sm"));
 
   &__header {
     @include col.flex_display(map-get(col.$gaps, "sm"));
     align-items: center;
-    
+
     @media (min-width: map-get(col.$device_size, "tablet")) {
       flex-direction: row;
-      justify-content: space-between;  
+      justify-content: space-between;
     }
   }
 
@@ -268,3 +269,38 @@ section {
     padding-bottom: map-get(col.$gaps, "sm");
   }
 }
+
+//Faq_section
+.faq_section {
+  @include col.flex_display(map-get(col.$gaps, "sm"));
+
+  &__header {
+    text-align: center;
+  }
+
+  &__list {
+    display: grid;
+    gap: map-get(col.$gaps, "md");
+    grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+  }
+}
+
+.faq_card {
+  @include col.flex_display(map-get(col.$gaps, "sm"));
+
+  &__question {
+    @include col.flex_display(map-get(col.$gaps, "md"));
+    flex-direction: row;
+    align-items: center;
+    font-size: map-get(col.$font_size, "big_bread");
+
+    img {
+      width: 32px;
+      border: 2px solid white;
+      border-radius: 100%;
+    }
+  }
+}
+
+
+
