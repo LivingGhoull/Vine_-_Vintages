@@ -71,6 +71,20 @@ section {
   }
 }
 
+//Input
+.input {
+  @include col.flex_display(map-get(col.$gaps, "xxs"));
+  height: fit-content;
+
+  input {
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0px map-get(col.$gaps, "xs") map-get(col.$gaps, "xxs")
+      rgba(0, 0, 0, 0.25);
+    padding: map-get(col.$gaps, "xs") map-get(col.$gaps, "sm");
+  }
+}
+
 //Sections
 //Hero section
 .hero_section {
@@ -253,6 +267,7 @@ section {
 }
 
 .news_card {
+  position: relative;
   padding: 0;
 
   &__img {
@@ -268,6 +283,10 @@ section {
     font-size: map-get(col.$font_size, "mid_bread");
     padding-bottom: map-get(col.$gaps, "sm");
   }
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 //Faq_section
@@ -281,7 +300,10 @@ section {
   &__list {
     display: grid;
     gap: map-get(col.$gaps, "md");
-    grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+
+    @media (min-width: map-get(col.$device_size, "tablet")) {
+      grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+    }
   }
 }
 
@@ -302,5 +324,25 @@ section {
   }
 }
 
+//Newsletter_section
+.newsletter_section {
+  @include col.flex_display(map-get(col.$gaps, "sm"), row);
+  flex-wrap: wrap;
+  justify-content: center;
+  align-self: center;
 
+  @media (min-width: map-get(col.$device_size, "desktop")) {
+    justify-content: space-between;
+  }
 
+  &__subscribe {
+    @include col.flex_display(map-get(col.$gaps, "sm"), row);
+    flex-wrap: wrap;
+    justify-content: center;
+    align-self: center;
+
+    input {
+      width: 300px;
+    }
+  }
+}

@@ -16,6 +16,7 @@
 @mixin button_type($hero: 0) {
   background: white;
   color: map-get(var.$colors, "dark_wine");
+  height: fit-content;
 
   border-radius: map-get(var.$gaps, "lg") 0px map-get(var.$gaps, "lg") 0px;
   border: none;
