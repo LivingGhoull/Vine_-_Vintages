@@ -5,7 +5,7 @@ function Testimonials_section() {
   return (
     <section>
       <div className="container testimonial_section">
-        <h2 className="h_mid_head">Testimonials</h2>
+        <h2 className="h_mid_head h_mid_head-center">Testimonials</h2>
         <div className="testimonial_section__list">
           {testimonials_list.map((value, index) => (
             <Testimonials_card

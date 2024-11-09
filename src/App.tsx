@@ -1,4 +1,6 @@
 import Header from "./components/Header"
+import Footer from "./components/Footer"
+
 
 import Hero_section from "./components/sections/Hero_section"
 import Sales_section from "./components/sections/Sales_section";
@@ -7,6 +9,7 @@ import Testimonials_section from "./components/sections/Testimonials_section";
 import News_section from "./components/sections/News_section";
 import Faq_section from "./components/sections/Faq_section";
 import Newsletter_section from "./components/sections/Newsletter_section";
+import Contact_section from "./components/sections/Contact_section";
 
 function App() {
   return (
@@ -26,6 +29,10 @@ function App() {
       <Faq_section />
 
       <Newsletter_section />
+
+      <Contact_section />
+
+      <Footer/>
     </>
   );
 }

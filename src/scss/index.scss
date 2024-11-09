@@ -36,6 +36,8 @@ section {
 //Individual elements
 //Container for width in diffrent devices
 .container {
+  width: 100%;
+
   @media (min-width: map-get(col.$device_size, "tablet")) {
     width: map-get(col.$device_size, "tablet");
   }
@@ -75,13 +77,24 @@ section {
 .input {
   @include col.flex_display(map-get(col.$gaps, "xxs"));
   height: fit-content;
+  box-sizing: border-box;
 
-  input {
+  input,
+  textarea {
+    box-sizing: border-box;
+    font-family: Arial;
+    font-size: map-get(col.$font_size, "bread");
+
     border-radius: 8px;
     border: none;
     box-shadow: 0px map-get(col.$gaps, "xs") map-get(col.$gaps, "xxs")
       rgba(0, 0, 0, 0.25);
     padding: map-get(col.$gaps, "xs") map-get(col.$gaps, "sm");
+  }
+
+  textarea {
+    height: 150px;
+    resize: none;
   }
 }
 
@@ -199,7 +212,7 @@ section {
 
     @media (min-width: map-get(col.$device_size, "desktop")) {
       flex-direction: row;
-      gap: map-get(col.$gaps, "lg");
+      gap: map-get(col.$gaps, "sm");
     }
   }
 }
@@ -292,11 +305,6 @@ section {
 //Faq_section
 .faq_section {
   @include col.flex_display(map-get(col.$gaps, "sm"));
-
-  &__header {
-    text-align: center;
-  }
-
   &__list {
     display: grid;
     gap: map-get(col.$gaps, "md");
@@ -343,6 +351,39 @@ section {
 
     input {
       width: 300px;
+    }
+  }
+}
+
+//Contact_section
+.contact_section {
+  &__content {
+    @include col.flex_display(map-get(col.$gaps, "sm"));
+    @media (min-width: map-get(col.$device_size, "desktop")) {
+      flex-direction: row;
+      gap: map-get(col.$gaps, "md");
+    }
+  }
+
+  &__google_map {
+    width: 100%;
+    border: none;
+
+    @media (min-width: map-get(col.$device_size, "desktop")) {
+      width: 50%;
+      height: auto;
+    }
+  }
+
+  &__form {
+    @include col.flex_display(map-get(col.$gaps, "sm"));
+
+    @media (min-width: map-get(col.$device_size, "desktop")) {
+      width: 50%;
+    }
+
+    button {
+      align-self: center;
     }
   }
 }

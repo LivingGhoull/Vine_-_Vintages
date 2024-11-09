@@ -47,6 +47,10 @@ $font_size: (
     @if($head == "big_head") {
       font-size: clamp(map-get($font_size, "mid_head"), 4vw, map-get($font_size, "big_head"))
     }
+
+    &-center {
+      text-align: center;
+    }
   }
 }
 
