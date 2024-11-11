@@ -1,6 +1,6 @@
 @use "./variable" as var;
 
-@mixin flex_display($gap: map-get(var.$gaps, "xs"), $flex_d: column ) {
+@mixin flex_display($gap: map-get(var.$gaps, "xs"), $flex_d: column) {
   display: flex;
   flex-direction: $flex_d;
   gap: $gap;
@@ -27,9 +27,16 @@
 
   padding: map-get(var.$gaps, "sm");
   padding-inline: map-get(var.$gaps, "lg");
-  
+
   box-shadow: map-get(var.$gaps, "xs") map-get(var.$gaps, "xs")
     map-get(var.$gaps, "xs") rgba(0, 0, 0, 0.25);
+
+  &:hover,
+  &:active {
+    cursor: pointer;
+    color: map-get(var.$colors, "light_wine");
+    background-color: #d9d9d9;
+  }
 
   @if $hero == 1 {
     font-size: map-get(var.$font_size, "big_bread");

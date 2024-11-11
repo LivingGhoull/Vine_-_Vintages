@@ -1,9 +1,9 @@
-import {Button} from "../Button";
-import {Input} from "../Input";
+import { Button } from "../Button";
+import { Input } from "../Input";
 
 function Newsletter_section() {
   return (
-    <section>
+    <section className="section-style">
       <div className="container newsletter_section">
         <h2 className="h_big_head">Newsletter sign up</h2>
 
@@ -16,4 +16,4 @@ function Newsletter_section() {
   );
 }
 
-export default Newsletter_section
+export default Newsletter_section;

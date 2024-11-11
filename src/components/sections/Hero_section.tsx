@@ -1,8 +1,8 @@
-import {Hero_Button} from "../Button";
+import { Hero_Button } from "../Button";
 
 function Hero_section() {
   return (
-    <section>
+    <section className="section-style">
       <div className="hero_section container">
         <div className="hero_section__info">
           <h1 className="h_big_head">Experience the Art of Winemaking</h1>

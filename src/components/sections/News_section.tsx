@@ -4,7 +4,7 @@ import list from "../../utility/news.json";
 
 function News_section() {
   return (
-    <section>
+    <section className="section-style">
       <div className="container news_section">
         <div className="news_section__header">
           <h2 className="h_mid_head">News</h2>
