@@ -1,7 +1,6 @@
 import Header from "./components/Header"
 import Footer from "./components/Footer"
 
-
 import Hero_section from "./components/sections/Hero_section"
 import Sales_section from "./components/sections/Sales_section";
 import About_section from "./components/sections/About_section";

@@ -50,7 +50,6 @@ body {
 //Container for width in diffrent devices
 .container {
   width: 100%;
-
   @media (min-width: map-get(col.$device_size, "tablet")) {
     width: map-get(col.$device_size, "tablet");
   }
@@ -77,6 +76,18 @@ body {
 
   @include col.button_type();
   width: fit-content;
+}
+
+.menu_btn {
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid rgba(255, 255, 0, 0);
+  border-radius: 10px;
+  outline: none;
+  
+  &:hover {
+    border: 2px solid rgb(255, 255, 255);
+
+  }
 }
 
 //Input
@@ -106,14 +117,59 @@ body {
 
 .navigation_content {
   &__list {
-    @include col.flex_display(map-get(col.$gaps, "sm"), row);
+    @include col.flex_display(map-get(col.$gaps, "lg"), row);
     flex-wrap: wrap;
     justify-content: center;
   }
 }
 
+.mobile_nav {
+  width: 100%;
+  padding: map-get(col.$gaps, "xl") 0;
+  position: absolute;
+  display: flex;
+  background-color: map-get(col.$colors, "darker_wine");
+  justify-content: center;
+  border-bottom: 1px solid white;
+
+  &__list {
+    @include col.flex_display(map-get(col.$gaps, "lg"));
+    text-align: center;
+  }
+
+  &__flex {
+    display: flex;
+    flex-direction: column;
+    padding-inline: map-get(col.$gaps, "sm");
+  }
+
+  &__close {
+    align-self: flex-end;
+  }
+}
+
 //Heder and Footer
-.header-content {
+.header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+  &__content {
+    @include col.flex_display(8px, row);
+    align-items: start;
+    justify-content: space-between;
+  }
+
+  &__navigation {
+    display: none;
+    @media (min-width: map-get(col.$device_size, "desktop")) {
+      display: block;
+    }
+  }
+
+  &__hamburgermenu {
+    @media (min-width: map-get(col.$device_size, "desktop")) {
+      display: none;
+    }
+  }
 }
 
 .footer {
@@ -319,7 +375,7 @@ body {
   padding: 0;
 
   &__hover {
-    position: absolute;  
+    position: absolute;
     width: 100%;
     height: 100%;
     opacity: 0;
@@ -328,18 +384,17 @@ body {
       opacity: 100%;
     }
   }
-  
+
   &__text {
-    position: absolute;  
+    position: absolute;
     z-index: 1;
-    font-size: map-get(col.$font_size, "mid_bread" );
+    font-size: map-get(col.$font_size, "mid_bread");
     font-weight: bold;
 
     top: 25%;
     left: 50%;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
   }
-  
 
   &__hover_background {
     background-color: black;
@@ -348,7 +403,7 @@ body {
     opacity: 50%;
     border-radius: 10px;
   }
-  
+
   &__img {
     width: 100%;
     border-radius: 10px 10px 0 0;
