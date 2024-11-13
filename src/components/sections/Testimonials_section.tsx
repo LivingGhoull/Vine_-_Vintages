@@ -3,7 +3,7 @@ import testimonials_list from "../../utility/testimonials.json";
 
 function Testimonials_section() {
   return (
-    <section className="section-style">
+    <section id="testimonial_section" className="section-style">
       <div className="container testimonial_section">
         <h2 className="h_mid_head h_mid_head-center">Testimonials</h2>
         <div className="testimonial_section__list">

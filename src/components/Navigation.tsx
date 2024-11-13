@@ -4,22 +4,22 @@ function Navigation() {
     <nav className="navigation_content">
       <ul className="navigation_content__list">
         <li>
-          <a href="#">About us</a>
+          <a href="#sales_section">Sales points</a>
         </li>
         <li>
-          <a href="#">Our wines</a>
+          <a href="#about_section">About us</a>
         </li>
         <li>
-          <a href="#">Winery Tours</a>
+          <a href="#testimonial_section">Testimonials</a>
         </li>
         <li>
-          <a href="#">Testimonials</a>
+          <a href="#news_section">News</a>
         </li>
         <li>
-          <a href="#">Events</a>
+          <a href="#faq_section">Faq</a>
         </li>
         <li>
-          <a href="#">Contacts</a>
+          <a href="#contact_section">Contact us</a>
         </li>
       </ul>
     </nav>

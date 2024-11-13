@@ -1,6 +1,6 @@
 function About_section() {
   return (
-    <section className="section-style">
+    <section id="about_section" className="section-style">
       <div className="container about_section">
         <div className="about_section__info">
           <h2 className="h_mid_head">About us</h2>

@@ -3,7 +3,7 @@ import { Button } from "../Button";
 
 function Contact_section() {
   return (
-    <section className="section-style">
+    <section id="contact_section" className="section-style">
       <div className="container contact_section">
         <h2 className="h_mid_head h_mid_head-center">Contact us</h2>
 

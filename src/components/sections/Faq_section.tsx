@@ -3,7 +3,7 @@ import list from "../../utility/faq_list.json";
 
 function Faq_section() {
   return (
-    <section className="section-style">
+    <section id="faq_section" className="section-style">
       <div className="container faq_section">
         <h2 className="h_mid_head h_mid_head-center">FAQ</h2>
         <div className="faq_section__list">
