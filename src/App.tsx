@@ -7,7 +7,6 @@ import About_section from "./components/sections/About_section";
 import Testimonials_section from "./components/sections/Testimonials_section";
 import News_section from "./components/sections/News_section";
 import Faq_section from "./components/sections/Faq_section";
-import Newsletter_section from "./components/sections/Newsletter_section";
 import Contact_section from "./components/sections/Contact_section";
 
 function App() {
@@ -26,8 +25,6 @@ function App() {
       <News_section />
 
       <Faq_section />
-
-      <Newsletter_section />
 
       <Contact_section />
 

@@ -36,7 +36,9 @@ function Header() {
                 <li>
                   <a href="#faq_section">Faq</a>
                 </li>
-               
+                <li>
+                  <a href="#newsletter_section">Newsletter sign up</a>
+                </li>
                 <li>
                   <a href="#contact_section">Contact us</a>
                 </li>
@@ -46,7 +48,7 @@ function Header() {
         </div>
       )}
 
-      <header className="section-style header">
+      <header className="section-style-deafult header">
         <div className="container header__content">
           <h2 className="h_mid_head">Vine & Vintages</h2>
           <div className="header__navigation">

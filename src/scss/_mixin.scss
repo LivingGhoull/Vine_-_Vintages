@@ -13,6 +13,12 @@
   font-style: normal;
 }
 
+@mixin deafult_section {
+  padding: map-get(var.$gaps, "xl") map-get(var.$gaps, "sm");
+  display: flex;
+  justify-content: center;
+}
+
 @mixin button_type($hero: 0) {
   background: white;
   color: map-get(var.$colors, "dark_wine");
