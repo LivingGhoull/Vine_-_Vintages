@@ -10,14 +10,13 @@ function Header() {
         <div className="mobile_nav">
           <div className="container mobile_nav__flex">
             <button
-              aria-expanded= "true"
+              role="button"
+              aria-expanded="true"
+              aria-label="Dropdown menu open"
               className="menu_btn mobile_nav__close"
               onClick={() => set_menu_open(!menu_open)}
             >
-              <img
-                src="src\assets\images\icons8-close-48.png"
-                alt="close dropdown menu"
-              />
+              <img src="src\assets\images\icons8-close-48.png" />
             </button>
 
             <nav>
@@ -57,6 +56,9 @@ function Header() {
           </div>
 
           <button
+            role="button"
+            aria-expanded="false"
+            aria-label="Dropdown menu down"
             className="menu_btn header__hamburgermenu"
             onClick={() => set_menu_open(!menu_open)}
           >

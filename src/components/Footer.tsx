@@ -7,21 +7,22 @@ function Footer() {
       <div className="container footer__content">
         <div className="footer__grid">
           <div className="footer__head">
-            <h2 className="h_mid_head">Vine & Vintages</h2>
+            <p className="h_mid_head">Vine & Vintages</p>
+
             <div className="footer__socials">
-              <a href="#Linkedin">
+              <a href="#Linkedin" className="footer__socials_link">
                 <img
                   src="src\assets\images\socials\icons8-linkedin-logo-48.png"
                   alt="Redirect to Linkedin Vine & Vintages"
                 />
               </a>
-              <a href="#Facebook">
+              <a href="#Facebook" className="footer__socials_link">
                 <img
                   src="src\assets\images\socials\icons8-facebook-logo-48.png"
                   alt="Redirect to Facebook Vine & Vintages"
                 />
               </a>
-              <a href="#Twitter">
+              <a href="#Twitter" className="footer__socials_link">
                 <img
                   src="src\assets\images\socials\icons8-twitter-logo-48.png"
                   alt="Redirect to Twitter Vine & Vintages"
@@ -30,11 +31,10 @@ function Footer() {
             </div>
           </div>
 
-          <nav>
-            <ul className="footer__nav">
-              <li>
-                <h3>Navigate</h3>
-              </li>
+          <nav className="footer__nav">
+            <p className="footer__title">Navigate</p>
+
+            <ul className="footer__list">
               <li>
                 <a href="#sales_section">Sales points</a>
               </li>
@@ -58,34 +58,37 @@ function Footer() {
 
           <div className="footer__contact_us">
             <div>
-              <h3>Contact us</h3>
+              <p className="footer__title">Contact us</p>
               <p>
                 "The contact details listed here are for demonstration purposes
                 only and are not real."
               </p>
             </div>
-            <p>
-              <h4>Email: </h4>info@vineandvintages-fake.com
-            </p>
-            <p>
-              <h4>Tlf: </h4>(555) 012-3456
-            </p>
-            <p>
-              <h4>Address:</h4> 123 Vine Street Vintagetown, AA 12345
-            </p>
+            <div className="footer__contact_info">
+              <p>
+                <p className="footer__undertitle">Email: </p>
+                info@vineandvintages-fake.com
+              </p>
+              <p>
+                <p className="footer__undertitle">Tlf: </p>(555) 012-3456
+              </p>
+              <p>
+                <p className="footer__undertitle">Address:</p> 123 Vine Street
+                Vintagetown, AA 12345
+              </p>
+            </div>
           </div>
 
           <div className="footer__subscripe">
             <div>
-              <h3>Subscripe</h3>
+              <p className="footer__title">Subscripe</p>
               <p>Enter your email to get notifed about our news</p>
             </div>
             <Input placeholder="mail@hotmail.dk">Email</Input>
             <Button>Subscripe</Button>
           </div>
         </div>
-
-        <p>© 2024 Vine&Vintages. ("NOT REAL")</p>
+        <p className="footer__copyright">© 2024 Vine&Vintages. ("NOT REAL")</p>
       </div>
     </footer>
   );
