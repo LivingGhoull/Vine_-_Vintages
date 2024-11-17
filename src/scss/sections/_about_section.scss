@@ -1,0 +1,36 @@
+@use "../collection" as col;
+
+//About_section
+.about_section {
+  @include col.flex_display(map-get(col.$gaps, "sm"));
+
+  @media (min-width: map-get(col.$device_size, "tablet")) {
+    gap: map-get(col.$gaps, lg);
+  }
+
+  @media (min-width: map-get(col.$device_size, "desktop")) {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  &__info {
+    align-items: center;
+    @include col.flex_display(map-get(col.$gaps, "sm"));
+
+    @media (min-width: map-get(col.$device_size, "desktop")) {
+      align-items: start;
+      justify-content: center;
+      width: 50%;
+    }
+  }
+
+  &__img {
+    align-self: center;
+    width: 100%;
+    border-radius: map-get(col.$gaps, "sm");
+
+    @media (min-width: map-get(col.$device_size, "tablet")) {
+      max-width: 500px;
+    }
+  }
+}

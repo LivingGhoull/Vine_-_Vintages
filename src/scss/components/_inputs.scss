@@ -1,0 +1,26 @@
+@use "../collection" as col;
+
+//Input
+.input {
+  @include col.flex_display(map-get(col.$gaps, "xxs"));
+  height: fit-content;
+  box-sizing: border-box;
+
+  input,
+  textarea {
+    box-sizing: border-box;
+    font-family: Arial;
+    font-size: map-get(col.$font_size, "bread");
+
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0px map-get(col.$gaps, "xs") map-get(col.$gaps, "xxs")
+      rgba(0, 0, 0, 0.25);
+    padding: map-get(col.$gaps, "xs") map-get(col.$gaps, "sm");
+  }
+
+  textarea {
+    height: 150px;
+    resize: none;
+  }
+}

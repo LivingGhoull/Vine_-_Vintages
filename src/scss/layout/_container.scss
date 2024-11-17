@@ -1,0 +1,12 @@
+@use "../collection" as col;
+
+.container {
+  width: 100%;
+  @media (min-width: map-get(col.$device_size, "tablet")) {
+    width: map-get(col.$device_size, "tablet");
+  }
+
+  @media (min-width: map-get(col.$device_size, "desktop")) {
+    width: map-get(col.$device_size, "desktop");
+  }
+}

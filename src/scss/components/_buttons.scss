@@ -1,0 +1,22 @@
+@use "../collection" as col;
+
+//Buttons as hero and deafult
+.call_to_action {
+  &-hero {
+    @include col.button_type($hero: 1);
+  }
+
+  @include col.button_type();
+  width: fit-content;
+}
+
+.menu_btn {
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid rgba(255, 255, 0, 0);
+  border-radius: 10px;
+  outline: none;
+
+  &:hover, &:focus {
+    border: 2px solid rgb(255, 255, 255);
+  }
+}

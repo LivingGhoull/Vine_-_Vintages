@@ -1,0 +1,38 @@
+@use "../collection" as col;
+
+//Contact_section
+.contact_section {
+  &__content {
+    @include col.flex_display(map-get(col.$gaps, "sm"));
+    @media (min-width: map-get(col.$device_size, "desktop")) {
+      flex-direction: row;
+      gap: map-get(col.$gaps, "md");
+    }
+  }
+
+  &__google_map {
+    width: 100%;
+    border: none;
+
+    @media (min-width: map-get(col.$device_size, "desktop")) {
+      width: 50%;
+      height: auto;
+    }
+  }
+
+  &__form {
+    @include col.flex_display(map-get(col.$gaps, "sm"));
+    button {
+      align-self: center;
+    }
+    @media (min-width: map-get(col.$device_size, "desktop")) {
+      width: 50%;
+    }
+
+    @media (min-width: map-get(col.$device_size, "desktop")) {
+      button {
+        align-self: start;
+      }
+    }
+  }
+}

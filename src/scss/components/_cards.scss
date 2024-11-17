@@ -1,0 +1,137 @@
+@use "../collection" as col;
+
+//Made for all the cards basic styling
+.card {
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: map-get(col.$gaps, "md") map-get(col.$gaps, "sm");
+  box-shadow: 0px map-get(col.$gaps, "xs") map-get(col.$gaps, "xxs")
+    rgba(0, 0, 0, 0.25);
+}
+
+.sales_card {
+  @include col.flex_display(map-get(col.$gaps, "sm"));
+  align-items: center;
+}
+
+.testimonial_card {
+  position: relative;
+
+  @media (min-width: map-get(col.$device_size, "desktop")) {
+    width: 350px;
+  }
+
+  @include col.flex_display();
+  align-items: center;
+
+  &__profile_pic {
+    position: absolute;
+    top: -75px;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    border: 2px solid white;
+  }
+
+  &__fullname {
+    font-size: map-get(col.$font_size, "mid_bread");
+    font-weight: bold;
+    &::before {
+      content: "— ";
+    }
+  }
+
+  &__review {
+    font-family: "Instrument Serif", serif;
+    font-weight: bold;
+    font-style: italic;
+
+    font-size: map-get(col.$font_size, "big_head");
+    display: block;
+    height: 40px;
+  }
+}
+
+.news_card {
+  position: relative;
+  padding: 0;
+  height: fit-content;
+
+  &__img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    height: 50%;
+  }
+
+  &__info {
+    padding: map-get(col.$gaps, "sm");
+    overflow: hidden;
+  }
+
+  &__header {
+    font-size: map-get(col.$font_size, "mid_bread");
+    padding-bottom: map-get(col.$gaps, "sm");
+  }
+
+  &__body {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+  }
+
+  //Hover effect
+  &__hover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 100%;
+    }
+  }
+
+  &__link:hover {
+    color: white;
+    text-decoration: none;
+  }
+
+  &__text {
+    position: absolute;
+    z-index: 1;
+    font-size: map-get(col.$font_size, "mid_bread");
+    font-weight: bold;
+    text-decoration: underline;
+
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__hover_background {
+    background-color: rgba(0, 0, 0, 0.77);
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+}
+
+.faq_card {
+  @include col.flex_display(map-get(col.$gaps, "sm"));
+
+  &__question {
+    @include col.flex_display(map-get(col.$gaps, "md"));
+    flex-direction: row;
+    align-items: center;
+    font-size: map-get(col.$font_size, "big_bread");
+
+    img {
+      width: map-get(col.$gaps, "lg");
+      border: 2px solid white;
+      border-radius: 100%;
+    }
+  }
+}

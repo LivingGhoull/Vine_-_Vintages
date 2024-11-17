@@ -1,0 +1,33 @@
+@use "../collection" as col;
+
+.news_section {
+  @include col.flex_display(map-get(col.$gaps, "sm"));
+
+  &__header {
+    @include col.flex_display(map-get(col.$gaps, "sm"));
+    align-items: center;
+
+    @media (min-width: map-get(col.$device_size, "tablet")) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__list {
+    display: grid;
+    justify-content: center;
+    gap: map-get(col.$gaps, "md");
+    //grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, 350px);
+    //grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+
+    @media (min-width: map-get(col.$device_size, "tablet")) {
+      //grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: map-get(col.$device_size, "desktop")) {
+      //grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+

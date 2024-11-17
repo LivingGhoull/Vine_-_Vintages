@@ -10,6 +10,7 @@ function Header() {
         <div className="mobile_nav">
           <div className="container mobile_nav__flex">
             <button
+              aria-expanded= "true"
               className="menu_btn mobile_nav__close"
               onClick={() => set_menu_open(!menu_open)}
             >

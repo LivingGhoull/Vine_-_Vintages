@@ -1,0 +1,51 @@
+@use "../collection" as col;
+
+.footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  gap: map-get(col.$gaps, "lg");
+  align-items: center;
+  flex-direction: column;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: map-get(col.$gaps, "sm");
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: map-get(col.$gaps, "xl");
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    padding-bottom: map-get(col.$gaps, "sm");
+
+    @media (min-width: map-get(col.$device_size, "tablet")) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (min-width: map-get(col.$device_size, "desktop")) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__head {
+    @include col.flex_display(map-get(col.$gaps, "sm"));
+    justify-self: center;
+    align-items: center;
+  }
+
+  &__socials {
+    @include col.flex_display(map-get(col.$gaps, "lg"), row);
+  }
+
+  &__nav {
+    @include col.flex_display(map-get(col.$gaps, "sm"));
+    align-items: center;
+    margin: 0;
+  }
+
+  &__contact_us, &__subscripe {
+    @include col.flex_display(map-get(col.$gaps, "sm"));
+  }
+
+}

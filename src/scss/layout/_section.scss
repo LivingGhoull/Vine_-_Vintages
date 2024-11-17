@@ -1,0 +1,18 @@
+@use "../collection" as col;
+
+//Creats space for all sections
+.section-style {
+  @include col.deafult_section();
+
+  &:nth-child(even) {
+    background-color: map-get(col.$colors, "light_wine");
+  }
+  &:nth-child(odd) {
+    background-color: map-get(col.$colors, "dark_wine");
+  }
+}
+
+.section-style-deafult {
+  @include col.deafult_section();
+  background-color: map-get(col.$colors, "light_wine");
+}

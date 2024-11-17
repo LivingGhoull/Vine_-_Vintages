@@ -1,0 +1,15 @@
+@use "../collection" as col;
+
+.testimonial_section {
+  @include col.flex_display(map-get(col.$gaps, "xxl"));
+  align-items: center;
+
+  &__list {
+    @include col.flex_display(map-get(col.$gaps, "xxl"));
+
+    @media (min-width: map-get(col.$device_size, "desktop")) {
+      flex-direction: row;
+      gap: map-get(col.$gaps, "sm");
+    }
+  }
+}

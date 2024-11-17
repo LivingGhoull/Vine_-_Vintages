@@ -1,0 +1,9 @@
+@use "../collection" as col;
+
+.navigation_content {
+  &__list {
+    @include col.flex_display(map-get(col.$gaps, "lg"), row);
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

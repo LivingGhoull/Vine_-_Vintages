@@ -1,0 +1,27 @@
+
+@use "./global";
+
+//Layout
+@use "./layout/container";
+@use "./layout/section";
+
+
+//Main elements in body
+@use "./components/footer";
+@use "./components/header";
+
+//Component parts
+@use "./components/cards";
+@use "./components/buttons";
+@use "./components/inputs";
+@use "./components/mobile_nav";
+@use "./components/desktop_nav";
+
+//Sections
+@use "./sections/hero_section";
+@use "./sections/sales_section";
+@use "./sections/about_section";
+@use "./sections/testimonial_section";
+@use "./sections/news_section";
+@use "./sections/faq_section";
+@use "./sections/contact_section";

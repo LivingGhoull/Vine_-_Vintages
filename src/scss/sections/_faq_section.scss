@@ -1,0 +1,16 @@
+@use "../collection" as col;
+
+//Faq_section
+.faq_section {
+  @include col.flex_display(map-get(col.$gaps, "sm"));
+  
+  &__list {
+    display: grid;
+    gap: map-get(col.$gaps, "md");
+
+    @media (min-width: map-get(col.$device_size, "tablet")) {
+      grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+    }
+  }
+}
+

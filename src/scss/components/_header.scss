@@ -1,0 +1,30 @@
+@use "../collection" as col;
+
+//Heder and Footer
+.header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+  &__content {
+    @include col.flex_display(8px, row);
+    align-items: start;
+    justify-content: space-between;
+
+    @media (min-width: map-get(col.$device_size, "desktop")) {
+      align-items: center;
+    }
+  }
+
+  &__navigation {
+    display: none;
+    @media (min-width: map-get(col.$device_size, "desktop")) {
+      display: block;
+    }
+  }
+
+  &__hamburgermenu {
+    @media (min-width: map-get(col.$device_size, "desktop")) {
+      display: none;
+    }
+  }
+}
+
