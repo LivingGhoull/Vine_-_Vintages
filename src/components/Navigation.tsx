@@ -16,7 +16,7 @@ function Navigation() {
           <a href="#news_section">News</a>
         </li>
         <li>
-          <a href="#faq_section">Faq</a>
+          <a href="#faq_section">FAQ</a>
         </li>
         <li>
           <a href="#contact_section">Contact us</a>
