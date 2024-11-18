@@ -34,7 +34,7 @@ function Header() {
                   <a href="#news_section">News</a>
                 </li>
                 <li>
-                  <a href="#faq_section">Faq</a>
+                  <a href="#faq_section">FAQ</a>
                 </li>
                 <li>
                   <a href="#newsletter_section">Newsletter sign up</a>

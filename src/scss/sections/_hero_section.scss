@@ -2,7 +2,9 @@
 
 //Hero section
 .hero {
-  height: 60vh;
+  @media (min-width: map-get(col.$device_size, "desktop")) {
+    height: 60vh;
+  }
 }
 
 .hero_section {
