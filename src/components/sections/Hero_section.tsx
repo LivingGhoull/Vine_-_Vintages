@@ -16,7 +16,7 @@ function Hero_section() {
         </div>
         <img
           className="hero_section__img"
-          src="assets\images\wine-bottle.png"
+          src="src\assets\images\wine-bottle.png"
           alt="Wine bottle"
         />
       </div>

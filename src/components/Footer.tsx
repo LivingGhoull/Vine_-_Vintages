@@ -12,19 +12,19 @@ function Footer() {
             <div className="footer__socials">
               <a href="#Linkedin" className="footer__socials_link">
                 <img
-                  src="assets\images\socials\icons8-linkedin-logo-48.png"
+                  src="src\assets\images\socials\icons8-linkedin-logo-48.png"
                   alt="Redirect to Linkedin Vine & Vintages"
                 />
               </a>
               <a href="#Facebook" className="footer__socials_link">
                 <img
-                  src="assets\images\socials\icons8-facebook-logo-48.png"
+                  src="src\assets\images\socials\icons8-facebook-logo-48.png"
                   alt="Redirect to Facebook Vine & Vintages"
                 />
               </a>
               <a href="#Twitter" className="footer__socials_link">
                 <img
-                  src="assets\images\socials\icons8-twitter-logo-48.png"
+                  src="src\assets\images\socials\icons8-twitter-logo-48.png"
                   alt="Redirect to Twitter Vine & Vintages"
                 />
               </a>
