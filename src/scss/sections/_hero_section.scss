@@ -1,6 +1,10 @@
 @use "../collection" as col;
 
 //Hero section
+.hero {
+  height: 60vh;
+}
+
 .hero_section {
   @include col.flex_display(map-get(col.$gaps, "sm"));
   align-items: center;

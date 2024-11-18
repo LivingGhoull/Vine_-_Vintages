@@ -2,7 +2,7 @@ import { Hero_Button } from "../Button";
 
 function Hero_section() {
   return (
-    <section className="section-style">
+    <section className="section-style hero">
       <div className="hero_section container">
         <div className="hero_section__info">
           <h1 className="h_big_head">Experience the Art of Winemaking</h1>
@@ -16,7 +16,7 @@ function Hero_section() {
         </div>
         <img
           className="hero_section__img"
-          src="src\assets\images\wine-bottle.png"
+          src="assets\images\wine-bottle.png"
           alt="Wine bottle"
         />
       </div>

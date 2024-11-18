@@ -16,7 +16,7 @@ function Header() {
               className="menu_btn mobile_nav__close"
               onClick={() => set_menu_open(!menu_open)}
             >
-              <img src="src\assets\images\icons8-close-48.png" />
+              <img src="assets\images\icons8-close-48.png" />
             </button>
 
             <nav>
@@ -63,7 +63,7 @@ function Header() {
             onClick={() => set_menu_open(!menu_open)}
           >
             <img
-              src="src\assets\images\icons8-hamburger-menu-48.png"
+              src="assets\images\icons8-hamburger-menu-48.png"
               alt="Hamburger menu"
             />
           </button>
