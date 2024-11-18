@@ -2,37 +2,37 @@
   {
     "header": "New Limited-Edition Reserve Wine Released",
     "body": "We are thrilled to announce the release of our newest limited-edition reserve wine! This exclusive blend has been carefully crafted from hand-selected grapes and aged to perfection. Visit the winery to experience its rich, full-bodied flavor, or order online while supplies last!",
-    "src": "src/assets/images/news/wine-4813260_1280.jpg",
+    "src": "assets/images/news/wine-4813260_1280.jpg",
     "alt": "Wine getting poured in a wine glass"
   },
   {
     "header": "Upcoming Seasonal Wine Tasting Event",
     "body": "Join us for a special seasonal wine tasting event where we’ll feature our latest releases, paired with gourmet bites. It’s the perfect opportunity to savor the flavors of the season and explore our vineyard. Tickets are limited—reserve your spot today!",
-    "src": "src/assets/images/news/wine-791133_640.jpg",
+    "src": "assets/images/news/wine-791133_640.jpg",
     "alt": "Table fill with wine glasses with some wine still in them"
   },
   {
     "header": "Vineyard Expansion: New Varietals Coming Soon",
     "body": "Exciting news from the vineyard! We’re expanding our vines to include several new grape varietals. This means more diverse wines for our collection in the coming years. Stay tuned for updates on the first harvest and upcoming tasting opportunities.",
-    "src": "src/assets/images/news/wine-6878013_640.jpg",
+    "src": "assets/images/news/wine-6878013_640.jpg",
     "alt": "Three rows full of alcohol"
   },
   {
     "header": "Behind the Scenes: A Day in the Life of Our Winemaker",
     "body": "Ever wondered what goes into crafting the perfect bottle of wine? In this exclusive blog post, we take you behind the scenes with our head winemaker. Learn about the passion, precision, and expertise that go into every bottle.",
-    "src": "src/assets/images/news/wine-1237340_640.jpg",
+    "src": "assets/images/news/wine-1237340_640.jpg",
     "alt": "Wine barrels in a wine basement "
   },
   {
     "header": "Celebrate Harvest Season with Our Annual Grape Stomping Event",
     "body": "Get ready for our most fun-filled event of the year—our annual grape stomping celebration! Join us as we celebrate harvest season with live music, food trucks, and the chance to stomp grapes the old-fashioned way. Bring your friends and family for a memorable day!",
-    "src": "src/assets/images/news/grapes-7157943_640.jpg",
+    "src": "assets/images/news/grapes-7157943_640.jpg",
     "alt": "Grapes used to make wine"
   },
   {
     "header": "Exclusive Member Discounts: Join Our Wine Club Today",
     "body": "Love our wines? Become a part of our exclusive Wine Club and enjoy special discounts, early access to new releases, and invitations to members-only events. Sign up today to start enjoying the perks and join a community of wine lovers!",
-    "src": "src/assets/images/news/wine-bottles-2842709_1920.jpg",
+    "src": "assets/images/news/wine-bottles-2842709_1920.jpg",
     "alt": "A wall full of wine bottles"
   }
 ]

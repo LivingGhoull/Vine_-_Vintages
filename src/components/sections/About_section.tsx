@@ -15,7 +15,7 @@ function About_section() {
         </div>
         <img
           className="about_section__img"
-          src="src\assets\images\team-5842784_640.jpg"
+          src="assets\images\team-5842784_640.jpg"
           alt="Company employees having a meeting around there workstations"
         />
       </div>
