@@ -42,6 +42,7 @@
     cursor: pointer;
     color: map-get(var.$colors, "light_wine");
     background-color: #d9d9d9;
+    text-decoration: underline 2px;
   }
 
   @if $hero == 1 {

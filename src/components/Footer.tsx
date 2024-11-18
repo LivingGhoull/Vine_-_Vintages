@@ -85,7 +85,7 @@ function Footer() {
               <p>Enter your email to get notifed about our news</p>
             </div>
             <Input placeholder="mail@hotmail.dk">Email</Input>
-            <Button>Subscripe</Button>
+            <Button>Subscribe</Button>
           </div>
         </div>
         <p className="footer__copyright">© 2024 Vine&Vintages. ("NOT REAL")</p>

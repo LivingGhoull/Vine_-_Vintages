@@ -5,7 +5,6 @@
   &-hero {
     @include col.button_type($hero: 1);
   }
-
   @include col.button_type();
   width: fit-content;
 }
